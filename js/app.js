@@ -608,8 +608,10 @@ function bindEventInteractions() {
     const eventEl = e.target.closest('.info-card-event');
     if (!eventEl) return;
     const eventId = eventEl.dataset.eventId;
-    if (!eventId || eventId.startsWith('evt-')) return;
-    expandEventDetail(eventId, eventEl);
+    const eventTitle = eventEl.dataset.eventTitle || '';
+    const eventYear = parseInt(eventEl.dataset.year) || 0;
+    if (!eventId) return;
+    expandEventDetail(eventId, eventEl, { title: eventTitle, year: eventYear });
   });
 }
 
@@ -672,7 +674,7 @@ function hideEventPreview() {
 }
 
 // 三级展开：点击事件后，在时间轴下方展示完整详情
-function expandEventDetail(eventId, eventEl) {
+function expandEventDetail(eventId, eventEl, fallbackInfo) {
   const expanded = document.getElementById('eventDetailExpanded');
   if (!expanded) return;
 
@@ -688,9 +690,25 @@ function expandEventDetail(eventId, eventEl) {
 
   activeEventIdInCard = eventId;
 
-  // 找到完整事件数据
-  const evt = events.find(e => e.id === eventId);
-  if (!evt) return;
+  // 找到完整事件数据（优先按 ID 匹配，fallback 按标题+年份模糊匹配）
+  let evt = events.find(e => String(e.id) === eventId);
+  if (!evt && fallbackInfo && fallbackInfo.title) {
+    evt = events.find(e =>
+      e.title === fallbackInfo.title ||
+      (Math.abs(e.year - fallbackInfo.year) <= 3 &&
+       e.title.includes(fallbackInfo.title) ||
+       fallbackInfo.title.includes(e.title))
+    );
+  }
+  // 再试一次更宽松的匹配
+  if (!evt && fallbackInfo && fallbackInfo.title) {
+    evt = events.find(e => Math.abs(e.year - fallbackInfo.year) <= 10);
+  }
+  if (!evt) {
+    // 确实找不到，显示提示
+    console.warn('[三级展开] 未找到事件数据:', eventId, fallbackInfo);
+    return;
+  }
 
   // 标记当前事件为已展开
   document.querySelectorAll('.info-card-event').forEach(el => el.classList.remove('expanded'));
@@ -780,7 +798,7 @@ function showCountryInfoCard(iso2, zhName, countryData) {
       const matchedEvent = events.find(e => e.title === ev.title && Math.abs(e.year - ev.year) < 5);
       const eventId = matchedEvent ? matchedEvent.id : `evt-${idx}`;
       html += `
-        <div class="info-card-event" data-event-id="${eventId}" data-year="${ev.year}">
+        <div class="info-card-event" data-event-id="${eventId}" data-year="${ev.year}" data-event-title="${ev.title}">
           <span class="info-card-event-year">${yearStr}</span>
           <span class="info-card-event-title">${ev.title}</span>
         </div>
