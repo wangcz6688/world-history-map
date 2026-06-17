@@ -690,44 +690,48 @@ function expandEventDetail(eventId, eventEl, fallbackInfo) {
 
   activeEventIdInCard = eventId;
 
-  // 找到完整事件数据（优先按 ID 匹配，fallback 按标题+年份模糊匹配）
+  // 严格匹配：优先按 ID → 按标题精确 → 按标题+年份(±5年)模糊
   let evt = events.find(e => String(e.id) === eventId);
   if (!evt && fallbackInfo && fallbackInfo.title) {
+    evt = events.find(e => e.title === fallbackInfo.title);
+  }
+  if (!evt && fallbackInfo && fallbackInfo.title && fallbackInfo.year) {
     evt = events.find(e =>
-      e.title === fallbackInfo.title ||
-      (Math.abs(e.year - fallbackInfo.year) <= 3 &&
-       e.title.includes(fallbackInfo.title) ||
-       fallbackInfo.title.includes(e.title))
+      e.title.includes(fallbackInfo.title) ||
+      fallbackInfo.title.includes(e.title)
     );
+    // 额外检查：同标题+年份接近才算
+    if (evt && Math.abs(evt.year - fallbackInfo.year) > 5) evt = null;
   }
-  // 再试一次更宽松的匹配
-  if (!evt && fallbackInfo && fallbackInfo.title) {
-    evt = events.find(e => Math.abs(e.year - fallbackInfo.year) <= 10);
-  }
-  if (!evt) {
-    // 确实找不到，显示提示
-    console.warn('[三级展开] 未找到事件数据:', eventId, fallbackInfo);
-    return;
-  }
+  // 注意：不再按纯年份 fallback，避免匹配到其他国家的错误事件
 
   // 标记当前事件为已展开
   document.querySelectorAll('.info-card-event').forEach(el => el.classList.remove('expanded'));
   eventEl.classList.add('expanded');
 
   // 渲染详情内容
+  const displayYear = evt ? evt.displayYear : (fallbackInfo.year < 0 ? `公元前 ${Math.abs(fallbackInfo.year)} 年` : `公元 ${fallbackInfo.year} 年`);
+  const title = evt ? evt.title : (fallbackInfo.title || '未知事件');
+
   let html = `
     <div class="detail-expanded-header">
-      <span class="detail-expanded-year">${evt.displayYear}</span>
+      <span class="detail-expanded-year">${displayYear}</span>
       <span class="detail-expanded-close" onclick="this.closest('.event-detail-expanded').classList.remove('visible')">✕</span>
     </div>
-    <h3 class="detail-expanded-title">${evt.title}</h3>
+    <h3 class="detail-expanded-title">${title}</h3>`;
+
+  if (!evt) {
+    // 找不到完整事件数据时，显示简洁提示（不显示错误信息）
+    html += `<div class="detail-expanded-desc" style="font-style:italic;color:var(--text-muted);padding:12px 0;">该事件的详细描述正在整理中...</div>`;
+  } else {
+    html += `
     <div class="detail-expanded-meta">
       <span>📍 ${evt.location}</span>
       <span>🌍 ${evt.region}</span>
       <span>🏷 ${evt.category}</span>
     </div>
-    <div class="detail-expanded-desc">${renderMarkdown(evt.detail)}</div>
-  `;
+    <div class="detail-expanded-desc">${renderMarkdown(evt.detail)}</div>`;
+  }
 
   expanded.innerHTML = html;
   // 隐藏二级浮层（避免重叠）
