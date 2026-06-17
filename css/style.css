@@ -983,24 +983,36 @@ body {
   margin-bottom: 0;
 }
 
-/* 三级展开：事件完整详情 */
+/* 三级展开：事件完整详情（显示在卡片右侧） */
 .event-detail-expanded {
-  display: none;
-  margin-top: 10px;
-  padding: 14px;
-  background: linear-gradient(135deg, var(--accent-dim), #f0f9ff);
-  border: 1px solid var(--accent-dim);
-  border-radius: 10px;
-  animation: slideInDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 60px;
+  width: 340px;
+  max-height: calc(100vh - 140px);
+  padding: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  box-shadow: 0 12px 48px rgba(15, 23, 42, 0.18);
+  z-index: 1100;
+  opacity: 0;
+  transform: translateX(-8px);
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
 }
 
 .event-detail-expanded.visible {
-  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
-@keyframes slideInDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 .detail-expanded-header {
@@ -1088,4 +1100,16 @@ body {
   font-size: 12px;
   line-height: 1.7;
   color: var(--text-secondary);
+}
+
+/* 三级面板滚动条 */
+.event-detail-expanded::-webkit-scrollbar {
+  width: 4px;
+}
+.event-detail-expanded::-webkit-scrollbar-track {
+  background: transparent;
+}
+.event-detail-expanded::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
 }

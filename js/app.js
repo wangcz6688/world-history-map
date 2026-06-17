@@ -730,12 +730,9 @@ function expandEventDetail(eventId, eventEl, fallbackInfo) {
   `;
 
   expanded.innerHTML = html;
+  // 隐藏二级浮层（避免重叠）
+  hideEventPreview();
   expanded.classList.add('visible');
-
-  // 滚动到可见区域
-  setTimeout(() => {
-    expanded.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, 50);
 }
 function iso2ToFlag(iso2) {
   if (!iso2 || iso2.length !== 2 || iso2 === '-9') return '🏳️';
