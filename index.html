@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界历史地图 — World History Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<header class="topbar">
+  <div class="logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+      <ellipse cx="12" cy="12" rx="6" ry="10" stroke-dasharray="2 2"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+    </svg>
+    <h1>世界历史地图</h1>
+  </div>
+  <div class="header-controls">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索历史事件..." />
+      <button id="searchBtn" aria-label="搜索">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-tags" id="filterTags">
+      <button class="tag active" data-category="all">全部</button>
+    </div>
+  </div>
+</header>
+
+<!-- 主体布局 -->
+<div class="main-container">
+  <!-- 左侧时间轴面板 -->
+  <aside class="timeline-panel" id="timelinePanel">
+    <div class="panel-header">
+      <h2>📜 历史时间轴</h2>
+      <button class="collapse-btn" id="collapseTimeline" title="折叠面板">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+    </div>
+    <div class="timeline-list" id="timelineList">
+      <!-- 动态生成 -->
+    </div>
+  </aside>
+
+  <!-- 中间地图区域 -->
+  <main class="map-container" id="mapContainer">
+    <div id="map"></div>
+    <!-- 国家信息卡片（悬停显示） -->
+    <div class="country-info-card" id="countryInfoCard">
+      <div class="info-card-header">
+        <span class="info-card-flag" id="infoCardFlag"></span>
+        <div class="info-card-titles">
+          <span class="info-card-name" id="infoCardName"></span>
+          <span class="info-card-name-en" id="infoCardNameEn"></span>
+        </div>
+        <button class="info-card-close" id="infoCardClose" title="关闭">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="info-card-body" id="infoCardBody">
+        <!-- 动态生成 -->
+      </div>
+    </div>
+    <!-- 地图上的图例 -->
+    <div class="map-legend">
+      <h3>事件类别</h3>
+      <div id="legendItems"></div>
+    </div>
+    <!-- 年份指示器 -->
+    <div class="year-indicator" id="yearIndicator">
+      <span id="yearDisplay">选择历史事件</span>
+    </div>
+  </main>
+
+  <!-- 右侧详情面板 -->
+  <aside class="detail-panel" id="detailPanel">
+    <div class="panel-header">
+      <h2 id="detailTitle">事件详情</h2>
+      <button class="close-btn" id="closeDetail" title="关闭详情">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="detail-content" id="detailContent">
+      <div class="detail-placeholder">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+        <p>从左侧时间轴选择一个历史事件</p>
+        <p class="sub">地图将自动飞往事件发生地</p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/country-names-zh.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

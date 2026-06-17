@@ -1,0 +1,399 @@
+[
+  {
+    "code": "CN",
+    "name": "China",
+    "nameZh": "中国",
+    "events": [
+      {"year": -221, "title": "秦统一六国"},
+      {"year": -138, "title": "张骞出使西域"},
+      {"year": 105, "title": "蔡伦改进造纸术"},
+      {"year": 618, "title": "唐朝建立"},
+      {"year": 1271, "title": "元朝建立"},
+      {"year": 1279, "title": "崖山海战，南宋灭亡"},
+      {"year": 1368, "title": "明朝建立"},
+      {"year": 1644, "title": "明朝灭亡，清朝入关"},
+      {"year": 1839, "title": "鸦片战争"},
+      {"year": 1894, "title": "甲午战争"},
+      {"year": 1911, "title": "辛亥革命"},
+      {"year": 1949, "title": "中华人民共和国成立"}
+    ]
+  },
+  {
+    "code": "EG",
+    "name": "Egypt",
+    "nameZh": "埃及",
+    "events": [
+      {"year": -3200, "title": "古埃及统一"},
+      {"year": -2550, "title": "吉萨金字塔建造"},
+      {"year": -1332, "title": "图坦卡蒙法老"},
+      {"year": -332, "title": "亚历山大大帝征服埃及"},
+      {"year": 642, "title": "阿拉伯征服埃及"},
+      {"year": 1517, "title": "奥斯曼征服埃及"},
+      {"year": 1869, "title": "苏伊士运河开通"},
+      {"year": 1952, "title": "埃及共和国成立"}
+    ]
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "nameZh": "希腊",
+    "events": [
+      {"year": -776, "title": "首届奥林匹克运动会"},
+      {"year": -500, "title": "雅典民主制度建立"},
+      {"year": -490, "title": "马拉松战役"},
+      {"year": -336, "title": "亚历山大大帝继位"},
+      {"year": -146, "title": "罗马征服希腊"},
+      {"year": 1821, "title": "希腊独立战争"},
+      {"year": 1981, "title": "希腊加入欧共体"}
+    ]
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "nameZh": "意大利",
+    "events": [
+      {"year": -753, "title": "罗马建城"},
+      {"year": -509, "title": "罗马共和国建立"},
+      {"year": -27, "title": "罗马帝国建立"},
+      {"year": 313, "title": "米兰敕令"},
+      {"year": 476, "title": "西罗马帝国灭亡"},
+      {"year": 1347, "title": "黑死病传入欧洲"},
+      {"year": 1453, "title": "文艺复兴高峰时期"},
+      {"year": 1861, "title": "意大利统一"},
+      {"year": 1957, "title": "签署《罗马条约》"}
+    ]
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "nameZh": "英国",
+    "events": [
+      {"year": 793, "title": "维京时代开始"},
+      {"year": 1066, "title": "诺曼征服"},
+      {"year": 1215, "title": "签署《大宪章》"},
+      {"year": 1588, "title": "击败西班牙无敌舰队"},
+      {"year": 1642, "title": "英国内战"},
+      {"year": 1689, "title": "光荣革命与《权利法案》"},
+      {"year": 1760, "title": "工业革命开始"},
+      {"year": 1914, "title": "参加一战"},
+      {"year": 1945, "title": "二战后工党执政"}
+    ]
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "nameZh": "法国",
+    "events": [
+      {"year": -58, "title": "凯撒征服高卢"},
+      {"year": 800, "title": "查理曼加冕为帝"},
+      {"year": 1789, "title": "法国大革命"},
+      {"year": 1804, "title": "拿破仑称帝"},
+      {"year": 1871, "title": "巴黎公社"},
+      {"year": 1914, "title": "参加一战"},
+      {"year": 1944, "title": "诺曼底登陆"},
+      {"year": 1958, "title": "第五共和国成立"}
+    ]
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "nameZh": "德国",
+    "events": [
+      {"year": 9, "title": "条顿堡森林战役"},
+      {"year": 1440, "title": "古腾堡发明活字印刷"},
+      {"year": 1517, "title": "马丁·路德宗教改革"},
+      {"year": 1871, "title": "德意志统一"},
+      {"year": 1918, "title": "德意志帝国灭亡"},
+      {"year": 1933, "title": "希特勒上台"},
+      {"year": 1945, "title": "纳粹德国投降"},
+      {"year": 1989, "title": "柏林墙倒塌"},
+      {"year": 1990, "title": "两德统一"}
+    ]
+  },
+  {
+    "code": "TR",
+    "name": "Turkey",
+    "nameZh": "土耳其",
+    "events": [
+      {"year": 1071, "title": "曼齐克特战役"},
+      {"year": 1453, "title": "君士坦丁堡陷落"},
+      {"year": 1520, "title": "苏莱曼大帝时期"},
+      {"year": 1918, "title": "奥斯曼帝国解体"},
+      {"year": 1923, "title": "土耳其共和国成立"}
+    ]
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "nameZh": "日本",
+    "events": [
+      {"year": 710, "title": "奈良时代开始"},
+      {"year": 1192, "title": "镰仓幕府建立"},
+      {"year": 1274, "title": "蒙古入侵日本"},
+      {"year": 1603, "title": "江户幕府建立"},
+      {"year": 1853, "title": "黑船来航"},
+      {"year": 1868, "title": "明治维新"},
+      {"year": 1894, "title": "甲午战争"},
+      {"year": 1941, "title": "偷袭珍珠港"},
+      {"year": 1945, "title": "日本投降"},
+      {"year": 1964, "title": "东京奥运会"}
+    ]
+  },
+  {
+    "code": "US",
+    "name": "United States of America",
+    "nameZh": "美国",
+    "events": [
+      {"year": 1776, "title": "美国独立宣言"},
+      {"year": 1787, "title": "美国宪法制定"},
+      {"year": 1861, "title": "南北战争"},
+      {"year": 1917, "title": "参加一战"},
+      {"year": 1929, "title": "大萧条"},
+      {"year": 1941, "title": "珍珠港事件"},
+      {"year": 1945, "title": "联合国成立"},
+      {"year": 1969, "title": "阿波罗登月"},
+      {"year": 1991, "title": "冷战结束"}
+    ]
+  },
+  {
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "nameZh": "沙特阿拉伯",
+    "events": [
+      {"year": 622, "title": "伊斯兰教希吉拉"},
+      {"year": 632, "title": "阿拉伯半岛统一"},
+      {"year": 1932, "title": "沙特阿拉伯建国"},
+      {"year": 1938, "title": "发现石油"}
+    ]
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "nameZh": "印度",
+    "events": [
+      {"year": -2500, "title": "印度河流域文明"},
+      {"year": -563, "title": "释迦牟尼诞生"},
+      {"year": -322, "title": "孔雀王朝建立"},
+      {"year": 320, "title": "笈多王朝建立"},
+      {"year": 1206, "title": "德里苏丹国建立"},
+      {"year": 1526, "title": "莫卧儿帝国建立"},
+      {"year": 1858, "title": "英国直接统治"},
+      {"year": 1947, "title": "印度独立与印巴分治"}
+    ]
+  },
+  {
+    "code": "MN",
+    "name": "Mongolia",
+    "nameZh": "蒙古",
+    "events": [
+      {"year": 1206, "title": "成吉思汗建立蒙古帝国"},
+      {"year": 1271, "title": "忽必烈建立元朝"},
+      {"year": 1368, "title": "元朝灭亡"},
+      {"year": 1636, "title": "臣服于清朝"},
+      {"year": 1921, "title": "蒙古人民共和国成立"}
+    ]
+  },
+  {
+    "code": "BS",
+    "name": "The Bahamas",
+    "nameZh": "巴哈马",
+    "events": [
+      {"year": 1492, "title": "哥伦布登陆"},
+      {"year": 1718, "title": "成为英国殖民地"},
+      {"year": 1973, "title": "巴哈马独立"}
+    ]
+  },
+  {
+    "code": "BA",
+    "name": "Bosnia and Herzegovina",
+    "nameZh": "波黑",
+    "events": [
+      {"year": 1463, "title": "奥斯曼征服波黑"},
+      {"year": 1914, "title": "萨拉热窝刺杀事件"},
+      {"year": 1992, "title": "波黑独立"},
+      {"year": 1995, "title": "代顿和平协议"}
+    ]
+  },
+  {
+    "code": "IR",
+    "name": "Iran",
+    "nameZh": "伊朗",
+    "events": [
+      {"year": -550, "title": "阿契美尼德波斯帝国建立"},
+      {"year": -490, "title": "希波战争"},
+      {"year": 224, "title": "萨珊波斯建立"},
+      {"year": 642, "title": "阿拉伯征服波斯"},
+      {"year": 1501, "title": "萨非王朝建立"},
+      {"year": 1979, "title": "伊斯兰革命"}
+    ]
+  },
+  {
+    "code": "IQ",
+    "name": "Iraq",
+    "nameZh": "伊拉克",
+    "events": [
+      {"year": -3000, "title": "苏美尔楔形文字诞生"},
+      {"year": -1754, "title": "汉谟拉比法典"},
+      {"year": -612, "title": "亚述帝国灭亡"},
+      {"year": 762, "title": "巴格达建城"},
+      {"year": 1258, "title": "蒙古攻陷巴格达"},
+      {"year": 1921, "title": "伊拉克王国建立"},
+      {"year": 2003, "title": "伊拉克战争"}
+    ]
+  },
+  {
+    "code": "RU",
+    "name": "Russia",
+    "nameZh": "俄罗斯",
+    "events": [
+      {"year": 862, "title": "留里克王朝建立"},
+      {"year": 988, "title": "罗斯受洗"},
+      {"year": 1242, "title": "冰上之战"},
+      {"year": 1547, "title": "伊凡四世加冕沙皇"},
+      {"year": 1682, "title": "彼得大帝继位"},
+      {"year": 1812, "title": "击退拿破仑入侵"},
+      {"year": 1917, "title": "十月革命"},
+      {"year": 1945, "title": "攻克柏林"},
+      {"year": 1991, "title": "苏联解体"}
+    ]
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "nameZh": "西班牙",
+    "events": [
+      {"year": -218, "title": "罗马征服伊比利亚"},
+      {"year": 711, "title": "阿拉伯征服西班牙"},
+      {"year": 1492, "title": "收复失地运动完成"},
+      {"year": 1492, "title": "哥伦布发现新大陆"},
+      {"year": 1519, "title": "麦哲伦环球航行"},
+      {"year": 1588, "title": "无敌舰队覆灭"},
+      {"year": 1936, "title": "西班牙内战"},
+      {"year": 1975, "title": "民主转型"}
+    ]
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "nameZh": "墨西哥",
+    "events": [
+      {"year": 250, "title": "玛雅文明鼎盛"},
+      {"year": 1325, "title": "阿兹特克建都"},
+      {"year": 1521, "title": "西班牙征服阿兹特克"},
+      {"year": 1810, "title": "墨西哥独立战争"},
+      {"year": 1910, "title": "墨西哥革命"},
+      {"year": 1968, "title": "特拉特洛尔科惨案"}
+    ]
+  },
+  {
+    "code": "PE",
+    "name": "Peru",
+    "nameZh": "秘鲁",
+    "events": [
+      {"year": -1200, "title": "查文文化"},
+      {"year": 1438, "title": "印加帝国建立"},
+      {"year": 1532, "title": "皮萨罗征服印加"},
+      {"year": 1821, "title": "秘鲁独立"},
+      {"year": 1980, "title": "回归民主"}
+    ]
+  },
+  {
+    "code": "VN",
+    "name": "Vietnam",
+    "nameZh": "越南",
+    "events": [
+      {"year": -111, "title": "汉朝征服越南"},
+      {"year": 938, "title": "白藤江之战，独立"},
+      {"year": 1407, "title": "明朝占领越南"},
+      {"year": 1428, "title": "后黎朝建立"},
+      {"year": 1885, "title": "成为法国保护国"},
+      {"year": 1954, "title": "奠边府战役"},
+      {"year": 1975, "title": "越南统一"}
+    ]
+  },
+  {
+    "code": "ID",
+    "name": "Indonesia",
+    "nameZh": "印度尼西亚",
+    "events": [
+      {"year": 100, "title": "爪哇印度教王国"},
+      {"year": 1293, "title": "满者伯夷帝国建立"},
+      {"year": 1500, "title": "伊斯兰教传入"},
+      {"year": 1602, "title": "荷兰东印度公司成立"},
+      {"year": 1945, "title": "印度尼西亚独立"}
+    ]
+  },
+  {
+    "code": "ML",
+    "name": "Mali",
+    "nameZh": "马里",
+    "events": [
+      {"year": 1235, "title": "松迪亚塔建立马里帝国"},
+      {"year": 1324, "title": "曼萨·穆萨朝圣"},
+      {"year": 1468, "title": "桑海帝国崛起"},
+      {"year": 1892, "title": "成为法国殖民地"},
+      {"year": 1960, "title": "马里独立"}
+    ]
+  },
+  {
+    "code": "ZA",
+    "name": "South Africa",
+    "nameZh": "南非",
+    "events": [
+      {"year": 1488, "title": "迪亚士抵达好望角"},
+      {"year": 1652, "title": "荷兰开普殖民地建立"},
+      {"year": 1815, "title": "英国接管开普"},
+      {"year": 1910, "title": "南非联邦成立"},
+      {"year": 1948, "title": "种族隔离制度化"},
+      {"year": 1990, "title": "曼德拉获释"},
+      {"year": 1994, "title": "曼德拉就任总统"}
+    ]
+  },
+  {
+    "code": "HT",
+    "name": "Haiti",
+    "nameZh": "海地",
+    "events": [
+      {"year": 1492, "title": "哥伦布抵达"},
+      {"year": 1697, "title": "成为法国殖民地"},
+      {"year": 1791, "title": "奴隶起义爆发"},
+      {"year": 1804, "title": "海地独立"},
+      {"year": 2010, "title": "大地震"}
+    ]
+  },
+  {
+    "code": "CU",
+    "name": "Cuba",
+    "nameZh": "古巴",
+    "events": [
+      {"year": 1492, "title": "哥伦布抵达古巴"},
+      {"year": 1898, "title": "美西战争"},
+      {"year": 1952, "title": "巴蒂斯塔政变"},
+      {"year": 1959, "title": "古巴革命胜利"},
+      {"year": 1962, "title": "古巴导弹危机"}
+    ]
+  },
+  {
+    "code": "VE",
+    "name": "Venezuela",
+    "nameZh": "委内瑞拉",
+    "events": [
+      {"year": 1498, "title": "哥伦布抵达"},
+      {"year": 1810, "title": "加拉加斯起义"},
+      {"year": 1821, "title": "卡拉博博战役"},
+      {"year": 1830, "title": "委内瑞拉独立"}
+    ]
+  },
+  {
+    "code": "NP",
+    "name": "Nepal",
+    "nameZh": "尼泊尔",
+    "events": [
+      {"year": -563, "title": "释迦牟尼诞生"},
+      {"year": 1768, "title": "沙阿王朝统一尼泊尔"},
+      {"year": 1846, "title": "拉纳家族掌权"},
+      {"year": 1951, "title": "恢复王权"},
+      {"year": 2008, "title": "废除君主制"}
+    ]
+  }
+]
